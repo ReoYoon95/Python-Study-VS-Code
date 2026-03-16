@@ -7,9 +7,12 @@ introduce = f"hi, my name is {name}"
 
 age = 20
 
-print(f"i am {age:05d} years old")
-print(f"i am {age:-<5d} years old")
-print(f"i am {age:*^5d} years old\n")
+x = int(input("나이를 입력하세요: "))
+
+print("i am {0} and {1} years old". format(name, x))
+print(f"i am {x:05d} years old")
+print(f"i am {x:-<5d} years old")
+print(f"i am {x:*^5d} years old\n")
 
 name1 = "철수"
 score1 = 95
@@ -20,3 +23,4 @@ pi = 3.141592653589793
 print(f"{pi:.2f}")
 
 print(f"pi : {pi:$<10.2f}")
+
