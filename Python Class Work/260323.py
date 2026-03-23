@@ -44,6 +44,8 @@
 # avr = (x + y + z) / 3
 # print(f"세 정수의 평균은 {avr:.2f}입니다.")
 
+
+# ==================================================
 # 매출 단순 계산기
 
 americano = 0
@@ -71,3 +73,52 @@ income = (
 )
 
 print(f"총 매출은 {income:,}원입니다.")
+
+
+# ==================================================
+# 딕셔너리를 이용한 방법
+
+# 1. 메뉴와 가격을 딕셔너리로 묶기 (Key: Value)
+prices = {"americano": 2000, "latte": 3000, "cappuccino": 2500, "pay_part_time": 11000}
+
+# 2. 입력 받기 (언패킹 활용)
+a_cnt, l_cnt, c_cnt, p_time = map(
+    int, input("아메리카노, 라떼, 카푸치노, 알바시간 입력 (예: 3 4 5 6): ").split()
+)
+
+# 3. 계산 (딕셔너리에서 값을 꺼내와서 계산)
+income = (
+    (a_cnt * prices["americano"])
+    + (l_cnt * prices["latte"])
+    + (c_cnt * prices["cappuccino"])
+    - (p_time * prices["pay_part_time"])
+)
+
+print(f"총 매출은 {income:,}원입니다.")
+
+
+# ==================================================
+# 튜플과 zip 함수를 활용한 고급 기술 (C언어의 병렬 배열 처리)
+
+# 1. 가격 뭉치 (튜플)
+prices = (2000, 3000, 2500, -11000)  # 시급은 빼야 하니까 마이너스로!
+
+# 2. 입력받은 개수 뭉치 (리스트)
+counts = list(map(int, input("아메리카노, 라떼, 카푸치노, 알바시간 입력: ").split()))
+
+# 3. zip으로 묶어서 한 번에 계산
+total_income = 0
+for p, c in zip(prices, counts):
+    total_income += p * c
+
+print(f"최종 수익: {total_income:,}원")
+
+
+# zip 과 enumerate를 활용한 고급 기술 (C언어의 병렬 배열 처리)
+
+prices = [2000, 3000, 2500]
+counts = [3, 4, 5]
+
+# zip으로 묶은 덩어리를 enumerate가 다시 번호를 매깁니다.
+for i, (p, c) in enumerate(zip(prices, counts)):
+    print(f"상품 {i+1}: {p}원 x {c}개 = {p*c}원")
