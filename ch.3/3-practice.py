@@ -59,3 +59,10 @@ while i == lv and lv < 6:
 
 for i in range(1, 6):
     print("*" * i)
+
+
+# 실습문제 4
+# for문을 사용해 1~100까지 출력
+
+for i in range(1, 101):
+    print(i)
