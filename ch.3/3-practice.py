@@ -37,3 +37,25 @@ print(result)
 # sum()사용 한다면??
 
 print(sum(range(3, 1001, 3)))
+
+
+# 실습문제 3
+# 와일문을 사용하여 아래의 그림을 만들어라.
+# *
+# **
+# ***
+# ****
+# *****
+
+i = 1
+lv = 1
+while i == lv and lv < 6:
+    print(f"*" * i)
+    i += 1
+    lv += 1
+
+
+# #for 문 사용하여 만들기
+
+for i in range(1, 6):
+    print("*" * i)
