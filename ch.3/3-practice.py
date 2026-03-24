@@ -87,3 +87,17 @@ A = [70, 60, 55, 75, 95, 90, 80, 80, 85, 100]
 total = sum(A)
 # for문을 돌릴 필요 없이 리스트 안의 숫자를 다 더해줍니다.
 avr = total / len(A)
+
+
+# 실습문제 6
+# 다음 소스 코드를 리스트 컴프리헨션 사용해라.
+
+# numbers = [1, 2, 3, 4, 5]
+# result = []
+# for n in numbers:
+#     if n % 2 ==1:
+#         result.append(n * 2)
+
+numbers = [1, 2, 3, 4, 5]
+result = [n * 2 for n in numbers if n % 2 == 1]
+print(result)
