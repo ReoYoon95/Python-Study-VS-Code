@@ -66,3 +66,24 @@ for i in range(1, 6):
 
 for i in range(1, 101):
     print(i)
+
+
+# 실습문제 5
+# a학급 학생10명의 학생의 점수를 for문사용해서 평균점수 구해라
+# [70, 60, 55, 75, 95, 90, 80, 80, 85, 100]
+
+A = [70, 60, 55, 75, 95, 90, 80, 80, 85, 100]
+avr = 0
+total = 0
+for score in A:
+    total += score
+avr = total / len(A)
+print(f"평균점수는 : {avr}")
+
+
+# sum 을 활용한 방식
+
+A = [70, 60, 55, 75, 95, 90, 80, 80, 85, 100]
+total = sum(A)
+# for문을 돌릴 필요 없이 리스트 안의 숫자를 다 더해줍니다.
+avr = total / len(A)
