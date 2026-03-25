@@ -138,3 +138,18 @@ counts = list(
 income = sum([p * c for p, c in zip(prices, counts)])
 
 print(f"총 매출은 {income:,}원입니다.")
+
+
+# 딕셔너리를 사용한 방법
+
+# 1. 메뉴판 만들기
+menu = {"아메리카노": 2000, "라떼": 3000, "카푸치노": 2500, "알바비": -11000}
+
+# 2. 수량 입력받기
+counts = list(map(int, input("수량 네 개 입력: ").split()))
+
+# 3. 계산하기 (이름은 필요 없으니 .values()만 사용!)
+# p는 가격, c는 수량
+income = sum([c * p for c, p in zip(counts, menu.values())])
+
+print(f"딕셔너리 버전 총 매출: {income:,}원")
