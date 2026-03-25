@@ -138,6 +138,3 @@ counts = list(
 income = sum([p * c for p, c in zip(prices, counts)])
 
 print(f"총 매출은 {income:,}원입니다.")
-
-
-pirnt("Hello World")
