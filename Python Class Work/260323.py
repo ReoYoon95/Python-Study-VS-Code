@@ -122,3 +122,22 @@ counts = [3, 4, 5]
 # zip으로 묶은 덩어리를 enumerate가 다시 번호를 매깁니다.
 for i, (p, c) in enumerate(zip(prices, counts)):
     print(f"상품 {i+1}: {p}원 x {c}개 = {p*c}원")
+
+# 리스트 컴프리헨션을 사용할때.
+
+prices = [2000, 3000, 2500, -11000]  # 아메리카노  # 라떼  # 카푸치노  # 알바비(지출)
+counts = list(
+    map(
+        int,
+        input(
+            "아메리카노, 라떼, 카푸치노, 아르바이트 시간을 한칸씩 띄어서 입력하시오 : (예시 3 4 5 6) :"
+        ).split(),
+    )
+)
+
+income = sum([p * c for p, c in zip(prices, counts)])
+
+print(f"총 매출은 {income:,}원입니다.")
+
+
+pirnt("Hello World")
