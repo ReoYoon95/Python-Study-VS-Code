@@ -122,3 +122,34 @@ counts = [3, 4, 5]
 # zip으로 묶은 덩어리를 enumerate가 다시 번호를 매깁니다.
 for i, (p, c) in enumerate(zip(prices, counts)):
     print(f"상품 {i+1}: {p}원 x {c}개 = {p*c}원")
+
+# 리스트 컴프리헨션을 사용할때.
+
+prices = [2000, 3000, 2500, -11000]  # 아메리카노  # 라떼  # 카푸치노  # 알바비(지출)
+counts = list(
+    map(
+        int,
+        input(
+            "아메리카노, 라떼, 카푸치노, 아르바이트 시간을 한칸씩 띄어서 입력하시오 : (예시 3 4 5 6) :"
+        ).split(),
+    )
+)
+
+income = sum([p * c for p, c in zip(prices, counts)])
+
+print(f"총 매출은 {income:,}원입니다.")
+
+
+# 딕셔너리를 사용한 방법
+
+# 1. 메뉴판 만들기
+menu = {"아메리카노": 2000, "라떼": 3000, "카푸치노": 2500, "알바비": -11000}
+
+# 2. 수량 입력받기
+counts = list(map(int, input("수량 네 개 입력: ").split()))
+
+# 3. 계산하기 (이름은 필요 없으니 .values()만 사용!)
+# p는 가격, c는 수량
+income = sum([c * p for c, p in zip(counts, menu.values())])
+
+print(f"딕셔너리 버전 총 매출: {income:,}원")
