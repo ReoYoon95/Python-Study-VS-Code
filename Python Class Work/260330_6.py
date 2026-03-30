@@ -17,7 +17,15 @@ name_list.append(input("5번째 친구 이름 입력: "))
 # list(map(str, input("이름을 한칸씩 띄어서 입력하시오: ").split()))
 
 print(input("친구확인 : (이름입력)") in name_list)
-print(name_list[int(input("인덱스번호 이름 확인 : (숫자입력)"))])
 
-name_list[int(input("바꾸고 싶은 인덱스 번호 입력: "))] = str(input("바꿀 이름 입력: "))
-print({name_list[int(input("확인하고 싶은 인덱스 번호 입력"))]})
+# print(name_list[int(input("인덱스번호 이름 확인 : (숫자입력)"))]) ## 수정
+idx = int(input("인덱스번호 이름 확인 : (숫자입력)"))
+print("해당 번호의 친구 이름:", name_list[idx])
+
+
+# name_list[int(input("바꾸고 싶은 인덱스 번호 입력: "))] = str(input("바꿀 이름 입력: "))
+# print({name_list[int(input("확인하고 싶은 인덱스 번호 입력"))]})
+new_name = input("바꿀 새 이름 입력: ")
+name_list[idx] = new_name
+
+print("최종 친구 리스트:", name_list)
