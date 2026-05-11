@@ -92,6 +92,7 @@ while True:
             break
         case "2":  # 로그인함수
             LogInInfo()
+            break
         case "1":  # 회원가입
             createUserInfo()
         case _:
