@@ -38,25 +38,6 @@ button_list = [
 row_index = 1
 col_index = 0
 
-# for button_text in button_list:
-#     Button(window, text=button_text, width=5).grid(row=row_index, column=col_index)
-#     col_index += 1
-#     if col_index > 4:
-#         row_index += 1
-#         col_index = 0
-
-
-# def click(key):
-#     display1.insert(END, key)
-
-# for button_text in button_list:
-#     Button(window, text=button_text, width=5,
-#            command=click(button_text)).grid(row=row_index, column=col_index)
-#     col_index += 1
-#     if col_index > 4:
-#         row_index += 1
-#         col_index = 0
-
 for button_text in button_list:
 
     def process(t=button_text):
